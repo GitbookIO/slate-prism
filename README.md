@@ -6,7 +6,7 @@ A Slate plugin to highlight code blocks using PrismJS
 
 ### Install
 
-```js
+```
 npm install slate-prism
 ```
 
