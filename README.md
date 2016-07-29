@@ -20,6 +20,8 @@ const plugins = [
 ]
 ```
 
+**Note:** You have to add a Prism theme CSS to your application.
+
 #### Arguments
 
 - ``[onlyIn: Function(Node)]`` — a filtering function to select code blocks.
