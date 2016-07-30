@@ -19,7 +19,9 @@ const plugins = [
 ];
 
 const NODES = {
-    code_block: props => <pre><code {...props.attributes}>{props.children}</code></pre>
+    code_block: props => <pre><code {...props.attributes}>{props.children}</code></pre>,
+    paragraph: props => <p {...props.attributes}>{props.children}</p>,
+    heading: props => <h1 {...props.attributes}>{props.children}</h1>
 };
 
 const Example = React.createClass({
