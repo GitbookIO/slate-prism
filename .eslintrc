@@ -1,6 +1,5 @@
 {
     "rules": {
-        "no-extra-boolean-cast": [ 0 ],
         "indent": [ 2, 4 ],
         "quotes": [ 2, "single" ],
         "linebreak-style": [ 2, "unix" ],
@@ -9,10 +8,13 @@
             "vars": "all",
             "args": "none"
         } ],
-        "spaced-comment": [ 2, "always" ]
+        "spaced-comment": [ 2, "always" ],
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
+        "react/react-in-jsx-scope": 2
     },
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 5,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
@@ -21,8 +23,15 @@
     },
     "env": {
         "node": true,
-        "browser": true,
-        "es6": true
+        "browser": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "electronRequire": true,
+        "remote": true,
+        "electron": true
     },
     "extends": "eslint:recommended"
 }
