@@ -22,6 +22,7 @@
     "browserify": "^13.1.0",
     "eslint": "^3.1.1",
     "eslint-plugin-react": "^5.2.2",
+    "gh-pages": "^0.11.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "slate": "^0.10.1",
@@ -33,7 +34,7 @@
     "build-example": "browserify ./example/main.js -o ./example/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "serve-example": "http-server ./example/ -p 8080",
     "start": "npm run build-example; npm run serve-example",
-    "deploy-example": ""
+    "deploy-example": "npm run build-example; gh-pages -d ./example"
   },
   "keywords": [
     "slate"
