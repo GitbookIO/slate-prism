@@ -28,6 +28,14 @@
                     ]
                 },
                 {
+                    "kind": "text",
+                    "ranges": [
+                        {
+                            "text": "Syntax can be set on a per-block basis:"
+                        }
+                    ]
+                },
+                {
                     "kind": "block",
                     "type": "code_block",
                     "data": { "syntax": "html" },
@@ -36,7 +44,7 @@
                             "kind": "text",
                             "ranges": [
                                 {
-                                    "text": "<b>Hello World</b>"
+                                    "text": "<!-- Some HTML -->\n<b>Hello World</b>"
                                 }
                             ]
                         }

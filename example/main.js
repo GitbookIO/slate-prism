@@ -1,14 +1,20 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const Slate = require('slate');
-const Prism = require('../');
+const PluginEditCode = require('slate-edit-code');
+const PluginPrism = require('../');
 
 const stateJson = require('./state');
 
+const onlyInCode = (node => node.type === 'code_block');
+
 const plugins = [
-    Prism({
-        onlyIn: (node => node.type === 'code_block'),
-        getSyntax: (node => node.data.get('syntax')) 
+    PluginPrism({
+        onlyIn: onlyInCode,
+        getSyntax: (node => node.data.get('syntax'))
+    }),
+    PluginEditCode({
+        onlyIn: onlyInCode
     })
 ];
 
