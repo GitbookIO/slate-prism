@@ -2,7 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const Slate = require('slate');
 const PluginEditCode = require('slate-edit-code');
-const PluginPrism = require('../');
+const PluginPrism = require('../lib/');
 
 const stateJson = require('./state');
 
