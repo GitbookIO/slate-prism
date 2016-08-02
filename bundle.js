@@ -174,8 +174,35 @@ function EditCode(opts) {
         }
     }
 
+    /**
+     * User is pasting content, insert it as text
+     */
+    function onPaste(event, data, state) {
+        var startBlock = state.startBlock;
+        var endBlock = state.endBlock;
+
+        // Only paste when selection is completly in the code block
+
+        if (startBlock.key !== endBlock.key) {
+            return;
+        }
+
+        // Only accept text/html
+        if (data.type !== 'text' && data.type !== 'html') {
+            return;
+        }
+
+        // Is it a code block
+        if (!opts.onlyIn(startBlock)) {
+            return;
+        }
+
+        return state.transform().insertText(data.text).apply();
+    }
+
     return {
-        onKeyDown: onKeyDown
+        onKeyDown: onKeyDown,
+        onPaste: onPaste
     };
 }
 
