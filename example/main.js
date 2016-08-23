@@ -18,10 +18,24 @@ const plugins = [
     })
 ];
 
-const NODES = {
-    code_block: props => <pre><code {...props.attributes}>{props.children}</code></pre>,
-    paragraph: props => <p {...props.attributes}>{props.children}</p>,
-    heading: props => <h1 {...props.attributes}>{props.children}</h1>
+/**
+ * Define a schema.
+ *
+ * @type {Object}
+ */
+
+const schema = {
+    nodes: {
+        code_block: {
+            render: props => <pre><code {...props.attributes}>{props.children}</code></pre>
+        },
+        paragraph: {
+            render: props => <p {...props.attributes}>{props.children}</p>
+        },
+        heading: {
+            render: props => <h1 {...props.attributes}>{props.children}</h1>
+        }
+    }
 };
 
 const Example = React.createClass({
@@ -37,10 +51,6 @@ const Example = React.createClass({
         });
     },
 
-    renderNode: function(node) {
-        return NODES[node.type];
-    },
-
     render: function() {
         return (
             <Slate.Editor
@@ -48,7 +58,7 @@ const Example = React.createClass({
                 plugins={plugins}
                 state={this.state.state}
                 onChange={this.onChange}
-                renderNode={this.renderNode}
+                schema={schema}
             />
     );
     }
