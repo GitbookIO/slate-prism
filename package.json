@@ -3,7 +3,7 @@
   "description": "A Slate plugin to highlight code blocks using PrismJS.",
   "version": "0.2.0",
   "license": "Apache-2.0",
-  "repository": "git://github.com/SamyPesse/slate-prism.git",
+  "repository": "git://github.com/GitbookIO/slate-prism.git",
   "main": "./dist/index.js",
   "dependencies": {
     "prismjs": "^1.5.1"
