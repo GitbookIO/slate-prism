@@ -9,7 +9,7 @@
     "prismjs": "^1.5.1"
   },
   "peerDependencies": {
-    "slate": ">=0.13.6",
+    "slate": "*",
     "react": "*",
     "react-dom": "*"
   },
@@ -26,8 +26,8 @@
     "http-server": "^0.9.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "slate": "^0.14.6",
-    "slate-edit-code": "0.5.0"
+    "slate": "0.15.10",
+    "slate-edit-code": "0.6.2"
   },
   "scripts": {
     "prepublish": "babel ./lib --out-dir ./dist",
