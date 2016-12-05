@@ -6,7 +6,7 @@
   "repository": "git://github.com/GitbookIO/slate-prism.git",
   "main": "./dist/index.js",
   "dependencies": {
-    "prismjs": "^1.5.1"
+    "prismjs": "^1.6.0"
   },
   "peerDependencies": {
     "slate": "*",
