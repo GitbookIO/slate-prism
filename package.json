@@ -9,9 +9,9 @@
     "prismjs": "^1.6.0"
   },
   "peerDependencies": {
-    "slate": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "slate": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -24,10 +24,13 @@
     "eslint-plugin-react": "^5.2.2",
     "gh-pages": "^0.11.0",
     "http-server": "^0.9.0",
+    "immutable": "^3.8.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "slate": "0.15.10",
-    "slate-edit-code": "0.6.2"
+    "slate": "^0.24.0",
+    "slate-edit-code": "0.11.0",
+    "slate-hyperscript": "^0.1.5",
+    "slate-react": "^0.1.5"
   },
   "scripts": {
     "prepublish": "babel ./lib --out-dir ./dist",
