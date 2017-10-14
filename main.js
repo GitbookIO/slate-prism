@@ -6,15 +6,13 @@ const PluginPrism = require('../lib/');
 
 const initialState = require('./state');
 
-const onlyInCode = (node => node.type === 'code_block');
-
 const plugins = [
     PluginPrism({
-        onlyIn: onlyInCode,
+        onlyIn: (node => node.type === 'code_block'),
         getSyntax: (node => node.data.get('syntax'))
     }),
     PluginEditCode({
-        onlyIn: onlyInCode
+        onlyIn: (node => node.type === 'code_block')
     })
 ];
 
