@@ -6,10 +6,10 @@
   "repository": "git://github.com/GitbookIO/slate-prism.git",
   "main": "./dist/index.js",
   "dependencies": {
-    "prismjs": "^1.13.0"
   },
   "peerDependencies": {
     "immutable": "*",
+    "prismjs": "*",
     "react": "*",
     "react-dom": "*",
     "@gitbook/slate": "^0.34.7"
@@ -30,6 +30,7 @@
     "gh-pages": "^1.0.0",
     "http-server": "^0.10.0",
     "immutable": "^3.8.2",
+    "prismjs": "^1.15.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "@gitbook/slate": "^0.34.7",
