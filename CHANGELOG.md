@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### 0.6.0
+
+- Moved PrismJS as peer dependency to avoid duplicate instances
+
 ### 0.5.0
 
 - Upgrade to slate^0.32.0
